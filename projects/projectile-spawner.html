@@ -1,0 +1,188 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+<head>
+    <title>Projectile Spawner | Joshua Dawkins, Technical Designer, Gameplay Programmer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/js/pgwslider/pgwslider.min.css" />
+</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Logo -->
+                <h1><a href="/index.html" id="logo">Joshua Dawkins</a></h1>
+
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul class="row">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/resume.html">Resume</a></li>
+                            <li class="subnav"><a href="/projects.html">Projects</a>
+                                <ul>
+                                    <li class="current"><a href="#">Projectile Spawner</a></li>
+                                    <li><a href="/projects/dash-shoot.html">Dash-Shoot</a></li>
+                                    <li class="subnav"><a href="/projects.html#analog-games">Analog Games</a>
+                                        <ul>
+                                            <li><a href="/projects/strategery.html">Strategery</a></li>
+                                            <li><a href="/projects/party-manor.html">Party Manor</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="subnav"><a href="/projects.html#remakes">Remakes</a>
+                                        <ul>
+                                            <li><a href="/projects/tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                                            <li><a href="/projects/lights-out.html">Lights Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+			<!-- Content -->
+				<section id="content">
+					<div class="container">
+						<div class="row">
+							<div class="col-3 col-12-medium">
+
+								<!-- Sidebar -->
+									<section>
+										<header>
+											<h3>Download Projectile Spawner</h3>
+										</header>
+										<ul class="row contact">
+											<li><a target="new" class="icon brands fa-github" href="https://github.com/JoshDawkins/ProjectileSpawner" title="Download Projectile Spawner Source on Github">
+												<span class="label">Download Projectile Spawner Source on Github</span>
+											</a></li>
+											<li><a target="new" class="icon brands fa-google-drive" href="https://drive.google.com/file/d/1cm0dejUftPKNmYq0AF_j9qLTMVQeQhot/view?usp=sharing"
+												title="Download Projectile Spawner Unity Package (2021.1.15f1) from Google Drive">
+												<span class="label">Download Projectile Spawner Unity Package (2021.1.15f1) from Google Drive</span>
+											</a></li>
+										</ul>
+									</section>
+									<section>
+										<h3>Role</h3>
+										<p>Design, Scripting</p>
+
+										<h3>Project Duration</h3>
+										<p>1 week</p>
+
+										<h3>Technologies Used</h3>
+										<ul class="bulleted">
+											<li>Unity 2021</li>
+											<li>Visual Studio Community 2019</li>
+										</ul>
+									</section>
+
+							</div>
+							<div class="col-9 col-12-medium imp-medium">
+
+								<!-- Main Content -->
+									<section>
+										<header>
+											<h2>Projectile Spawner</h2>
+										</header>
+										<p class="biggerTxt">This was a fairly quick, simple exercise I took on in my free time. The idea was simply to create a generic projectile spawner suitable
+											for a "bullet hell" style top-down shooter, which would be flexible and easy to use. To this end, it offers a significant selection of options in the
+											Unity inspector, organized into groups and typically constrained to a logical range. With options like positional and radial offsets, rotation,
+											multi-directional fire, cone fire settings, sweeps, and timed burst fire, it's possible to create a wide range of patterns; combining multiple spawners,
+											possibly with varying projectile types, further expands the possibilities.</p>
+										<p class="biggerTxt">A significant design decision I made here was to decouple the projectiles from the spawner as much as possible, with the spawner having
+											only a reference to a manager that handles pooling through Unity 2021's new ObjectPool type. Because of this, projectile scripts and prefabs are
+											responsible for defining the behavior of individual bullets, and the spawner only controls when and where they are spawned. This offers the advantages
+											of proper separation of responsibilities and minimizing the data that each of a potentially large number of projectiles needs to contain, and keeping the
+											spawner's options focused on spawning. The tradeoff is of course that the designer loses out on a range of possibilities related to the behavior of
+											projectiles after spawning, unless they are each configured outside the spawner through appropriate scripts and prefabs. Because of this, this tool would
+											be most suited to a game with a relatively small number of well-defined projectile types; a game that wants to be more experimental in this regard would
+											benefit from significant modifications to this system with that requirement in mind.</p>
+									</section>
+									<section class="gallery">
+										<header>
+											<h2>Image Gallery</h2>
+										</header>
+
+										<ul class="pgwSlider">
+											<li><img src="/images/projectile-spawner/inspector-default.png" /></li>
+											<li><img src="/images/projectile-spawner/example.gif" /></li>
+											<li><img src="/images/projectile-spawner/inspector.png" /></li>
+											<li><img src="/images/projectile-spawner/sample1.gif" /></li>
+											<li><img src="/images/projectile-spawner/sample2.gif" /></li>
+											<li><img src="/images/projectile-spawner/sample3.gif" /></li>
+											<li><img src="/images/projectile-spawner/sample4.gif" /></li>
+											<li><img src="/images/projectile-spawner/sample5.gif" /></li>
+										</ul>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-12-medium">
+
+                <!-- Links -->
+                    <section>
+                        <h2><span>Get in touch</span></h2>
+                        <ul class="row contact">
+                            <li><a target="new" class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/joshua-dawkins-9001/"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </section>
+
+            </div>
+            <div class="col-4 col-12-medium imp-medium">
+                
+                    <!--<section>
+                        <h2></h2>
+                        <p>
+                            
+                        </p>
+                    </section>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				&copy; Joshua Dawkins. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script src="/assets/js/pgwslider/pgwslider.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.pgwSlider').pgwSlider({ selectionMode: "mouseOver", intervalDuration: 5000 });
+			});
+		</script>
+
+	</body>
+</html>
