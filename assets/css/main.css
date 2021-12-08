@@ -2177,7 +2177,7 @@ ul.contact {
 #nav li.subnav > ul {
 	display: none;
 	position: absolute;
-	width: 10em;
+	width: 11em;
 	background: #3B4346;
 	z-index: 1000;
 }
