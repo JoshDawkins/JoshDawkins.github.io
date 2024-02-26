@@ -1649,6 +1649,22 @@ input, select, textarea {
 		#content .check-list li {
 			border-bottom: solid 1px #e2e6e8;
 		}
+		
+		#content .subInfo {
+			color: #96a9b5;
+		}
+
+			#content h2 .subInfo {
+				font-size: 0.7em;
+			}
+
+			#content h3 .subInfo {
+				font-size: 0.9em;
+			}
+
+			#content h3:has(> .subInfo){
+				color: #373f42;
+			}
 
 /* Footer */
 
