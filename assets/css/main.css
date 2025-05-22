@@ -2252,6 +2252,10 @@ p.biggerTxt {
 		height: 640px;
 	}
 
+	.gallery iframe.webgl {
+		height: 660px;
+	}
+
 #content .quote-list a{
 	color: #474f51;
 	text-decoration: none;

@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<!--
+	Halcyonic by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+
+<html>
+<head>
+    <title>Super UGUI Utilities | Joshua Dawkins - Software Engineer &amp; Technical Game Designer</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <link rel="stylesheet" href="/assets/js/pgwslider/pgwslider.min.css" />
+</head>
+	<body class="subpage">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+<section id="header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+
+                <!-- Logo -->
+                <h1><a href="/index.html" id="logo">Joshua Dawkins</a></h1>
+
+                <!-- Nav -->
+                    <nav id="nav">
+                        <ul class="row">
+                            <li><a href="/index.html">Home</a></li>
+                            <li><a href="/resume.html">Resume</a></li>
+                            <li class="subnav"><a href="/projects.html">Projects</a>
+                                <ul>
+                                    <li><a href="/projects/live-free-or-pi-hard.html">Live Free or Pi Hard</a></li>
+                                    <li><a href="/projects/projectile-spawner.html">Projectile Spawner</a></li>
+                                    <li class="current"><a href="#">Super UGUI Utilities</a></li>
+                                    <li><a href="/projects/dash-shoot.html">Dash-Shoot</a></li>
+                                    <li class="subnav"><a href="/projects.html#analog-games">Analog Games</a>
+                                        <ul>
+                                            <li><a href="/projects/strategery.html">Strategery</a></li>
+                                            <li><a href="/projects/party-manor.html">Party Manor</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="subnav"><a href="/projects.html#remakes">Remakes</a>
+                                        <ul>
+                                            <li><a href="/projects/tic-tac-toe.html">Tic-Tac-Toe</a></li>
+                                            <li><a href="/projects/lights-out.html">Lights Out</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+			<!-- Content -->
+				<section id="content">
+					<div class="container">
+						<div class="row">
+							<div class="col-3 col-12-medium">
+
+								<!-- Sidebar -->
+									<section>
+										<header>
+											<h3>Download Super UGUI Utilities</h3>
+										</header>
+										<ul class="row contact">
+											<li><a target="new" class="icon brands fa-github" href="https://github.com/JoshDawkins/Super-UGui-Utilities"
+												title="Download Super UGUI Utilities Source on Github">
+												<span class="label">Download Super UGUI Utilities Source on GitHub</span>
+											</a></li>
+										</ul>
+									</section>
+									<section>
+										<h3>Role</h3>
+										<p>Design, Scripting</p>
+
+										<h3>Project Duration</h3>
+										<p>3 Months, irregular</p>
+
+										<h3>Technologies Used</h3>
+										<ul class="bulleted">
+											<li>Unity 6</li>
+											<li>C#</li>
+											<li>GitHub, GitHub Desktop</li>
+										</ul>
+									</section>
+									<section>
+										<header>
+											<h3>Additional Attribution</h3>
+										</header>
+										<p>Ninja sprites by pzUH, <a href="https://opengameart.org/content/ninja-adventure-free-sprite" target="new">available on OpenGameArt.Org</a>. Used under the CC0 Public Domain license.</p>
+									</section>
+
+							</div>
+							<div class="col-9 col-12-medium imp-medium">
+
+								<!-- Main Content -->
+									<section>
+										<header>
+											<h2>Super UGUI Utilities</h2>
+										</header>
+										<p class="biggerTxt">The goal of this project was primarily as a simple portfolio piece to begin to demonstrate a little bit of my coding
+											philosophy, as well as just a small portion of the expertise I have developed with Unity's default UGUI user interface system in the
+											course of my professional work. It consists largely of a number of utility components and methods designed to solve common problems
+											faced when using this UI system and establish a pattern for simple, robust, and maintainable development of UI behaviors. A sample
+											scene showing many of these features is included as well and can be viewed directly in your browser below, though much of the uniqueness
+											of the project is only evident in the code.</p>
+										<p class="biggerTxt">Some of the key features provided by this set of utilities include:</p>
+										<ul>
+											<li>
+												<h3>"Behavior" Components</h3>
+												<p class="biggerTxt">These utilities establish a pattern for adding behavior to selectable UI elements like buttons	and toggles, using components based on common base classes that handle the boilerplate of adding and removing listeners in the OnEnable and OnDisable methods. For example, the base ButtonBehavior script attaches an abstract OnClick method to the click event of a Button element, which is then defined and configured by a concrete subclass, such as a CooldownButton component that makes the button non-interactive for a configurable duration after each click. The intent here is to keep each behavior simple and reusable as much as possible, though the pattern works equally well for bespoke one-off behaviors. Behaviors can then be mixed-and-matched on a single element to create more complex functionality for the user.</p>
+											</li>
+											<li>
+												<h3>Super Selectables</h3>
+												<p class="biggerTxt">One challenge that can arise sometimes when working with UGUI is that the default "selectable" components (Button, Toggle, Dropdown, etc.) don't publicly expose anything about their selection state. This can make it trickier than expected to apply seemingly simple behaviors, such as changing the colors or sprites of multiple graphics (for example, a button's background, icon, and text) as the element is hovered, pressed, or disabled. One solution would be to use Selectable's ability to activate triggers on an Animator, but this involves a lot of setup and hides the behavior outside of code, which some teams will be more comfortable with than others. It may also be less ideal for certain non-visual behaviors requiring complex logic.</p>
+												<p class="biggerTxt">Super Selectables offer an alternative solution by replacing any given selectable with a derived component (Button becomes SuperButton, Toggle becomes SuperToggle, and so on) that exposes the current state as well as a state change event for other scripts to utilize. This makes it simple to write components that respond to interactions such as hovering or becoming non-interactive in much the same way as Selectable's default color-tinting or sprite swapping logic, including behaviors literally mimicking them for additional graphics. Super selectables inherit from the matching standard selectable type, allowing them to be passed to anything requiring a standard button, toggle, etc. As a convenience, an option has been added to the inspector's context menu for each standard selectable component to automatically upgrade it to the corresponding Super selectable while maintaining all existing properties.</p>
+											</li>
+											<li>
+												<h3>Themes</h3>
+												<p class="biggerTxt">This project also provides a framework for a powerful theming system, which allows the enforcement of a theme at both edit time and runtime, as well as swapping themes on the fly. This is achieved through a few different pieces, including a theme manager, a theme definition asset consisting of multiple theme styles, and a themed element component that enforces a theme style on another component. It is capable of supporting complex themes involving many different types of elements each with multiple possible styles, but also provides a simplified coding interface that can be used when only one type of element needs to be supported (for example, themes only affecting text styles).</p>
+												<p class="biggerTxt">I chose to design this theming system as a framework that would require some simple scripting for an implementing project to fill in generic types and define which properties of what types of elements a theme is capable of controlling. This makes it appropriate as a starting point for implementing themes tailored to multiple individual projects or different aspects of the same project, without the need to implement core aspects such as theme swapping or style lookup. It does however introduce some additional complexity compared to a bespoke system built from the ground up for the needs of a single project, though this would be a worthwhile tradeoff in many scenarios.</p>
+											</li>
+										</ul>
+									</section>
+									<section class="gallery">
+										<header>
+											<h2>Try It Out!</h2>
+										</header>
+
+										<iframe src="../assets/webgl/super-ugui-utilities/index.html" class="webgl"></iframe>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</section>
+
+			<!-- Footer -->
+<section id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-8 col-12-medium">
+
+                <!-- Links -->
+                    <section>
+                        <h2><span>Get in touch</span></h2>
+                        <ul class="row contact">
+                            <li><a target="new" class="icon brands fa-linkedin-in" href="https://www.linkedin.com/in/joshua-dawkins-9001/"><span class="label">LinkedIn</span></a></li>
+                        </ul>
+                    </section>
+
+            </div>
+            <div class="col-4 col-12-medium imp-medium">
+                
+                    <!--<section>
+                        <h2></h2>
+                        <p>
+                            
+                        </p>
+                    </section>-->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+		<!-- Copyright -->
+			<div id="copyright">
+				&copy; Joshua Dawkins. All rights reserved. | Design: <a href="http://html5up.net">HTML5 UP</a>
+			</div>
+
+		</div>
+
+		<!-- Scripts -->
+        <script src="/assets/js/jquery.min.js"></script>
+		<script src="/assets/js/browser.min.js"></script>
+		<script src="/assets/js/breakpoints.min.js"></script>
+		<script src="/assets/js/util.js"></script>
+		<script src="/assets/js/main.js"></script>
+		<script src="/assets/js/pgwslider/pgwslider.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.pgwSlider').pgwSlider({ selectionMode: "mouseOver", intervalDuration: 5000 });
+			});
+		</script>
+
+	</body>
+</html>
